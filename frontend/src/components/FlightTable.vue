@@ -65,13 +65,10 @@
                     params: row
                 }).then(function (ret) {
                     console.log(ret)
-                    if (ret.data.status === 0) {
-                        alert("购票成功!");
+                    if (ret.data.data.key) {
                         that.onSearch();
                     }
-                    else {
-                        alert("购票失败，余额不足!");
-                    }
+                    alert(ret.data.data.value);
                 }, function () {
                     console.log('传输失败');
                 });

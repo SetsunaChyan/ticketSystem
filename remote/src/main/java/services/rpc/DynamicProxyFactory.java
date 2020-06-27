@@ -1,20 +1,18 @@
 package services.rpc;
 
-import javafx.util.Pair;
-
 import java.lang.reflect.*;
 
 // 动态代理类
 public class DynamicProxyFactory
 {
-    public static <T> T getProxy(final Class<T> classType,final Pair<String,Integer> host)
+    public static <T> T getProxy(final Class<T> classType,final String host,final int port)
     {
         InvocationHandler handler=(proxy,method,args)->
         {
             Connector connector=null;
             RemoteCall call;
 
-            connector=new Connector(host.getKey(),host.getValue());
+            connector=new Connector(host,port);
             call=new RemoteCall(classType.getName(),method.getName(),method.getParameterTypes(),args);
             connector.send(call);
             call=(RemoteCall)connector.receive();

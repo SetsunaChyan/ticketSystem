@@ -4,25 +4,44 @@ import com.sys.entity.Flight;
 import javafx.util.Pair;
 import org.json.JSONObject;
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.Tuple;
 import services.rpc.DynamicProxyFactory;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FlightCompanyServiceImpl implements FlightCompanyService
 {
-    private final static String JedisIP="47.115.54.167";
-    private final static String BankServiceIP="localhost";
-    //private final static String BankServiceIP="47.115.54.167";
-    private final static int BankServicePort=23333;
+    private String getRedisIP()
+    {
+        String fileName=System.getProperty("user.dir")+File.separator+"config"+File.separator+"redisConfig.json";
+        try
+        {
+            FileReader fileReader=new FileReader(fileName);
+            Reader reader=new InputStreamReader(new FileInputStream(fileName),"utf-8");
+            int ch=0;
+            StringBuffer sb=new StringBuffer();
+            while((ch=reader.read())!=-1) sb.append((char)ch);
+            fileReader.close();
+            reader.close();
+            JSONObject job=new JSONObject(sb.toString());
+            return job.getString("RedisIP");
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            return "localhost";
+        }
+    }
 
     @Override
     public List<Flight> getFlight(String depart,String dest,String date)
     {
-        Jedis jedis=new Jedis(JedisIP);
+        Jedis jedis=new Jedis(getRedisIP());
         List<String> list=jedis.lrange("flights",0,-1);
         List<Flight> ret=new ArrayList<>();
-        for(String it:list)
+        for(String it: list)
         {
             Flight f=new Flight(it);
             boolean ok=true;
@@ -36,11 +55,9 @@ public class FlightCompanyServiceImpl implements FlightCompanyService
     }
 
     @Override
-    public Pair<Boolean, String> buyFlight(String flightName)
+    public Pair<Flight, Integer> getFlight(String flightName)
     {
-        BankService service=DynamicProxyFactory.getProxy(BankService.class,BankServiceIP,BankServicePort);
-
-        Jedis jedis=new Jedis(JedisIP);
+        Jedis jedis=new Jedis(getRedisIP());
         List<String> list=jedis.lrange("flights",0,-1);
         Flight ob=new Flight();
         int idx=0;
@@ -54,31 +71,37 @@ public class FlightCompanyServiceImpl implements FlightCompanyService
                 idx=i;
             }
         }
-        Pair<Boolean,String> ret=service.pay(Integer.parseInt(ob.getPrice()));
-        if(ret.getKey())
-        {
-            jedis.rpush("flightsInCast",new JSONObject(ob).toString());
-            ob.setRest(String.valueOf(Integer.parseInt(ob.getRest())-1));
-            jedis.lset("flights",idx,new JSONObject(ob).toString());
-        }
-        return ret;
+        return new Pair<>(ob,idx);
     }
 
     @Override
     public List<Flight> getFlightInCast()
     {
-        Jedis jedis=new Jedis(JedisIP);
+        Jedis jedis=new Jedis(getRedisIP());
         List<String> list=jedis.lrange("flightsInCast",0,-1);
         List<Flight> ret=new ArrayList<>();
-        for(String it:list)
+        for(String it: list)
             ret.add(new Flight(it));
         return ret;
     }
 
     @Override
+    public void decFlight(String flightName)
+    {
+        Pair<Flight, Integer> ret=getFlight(flightName);
+        Flight ob=ret.getKey();
+        int idx=ret.getValue();
+
+        Jedis jedis=new Jedis(getRedisIP());
+        jedis.rpush("flightsInCast",new JSONObject(ob).toString());
+        ob.setRest(String.valueOf(Integer.parseInt(ob.getRest())-1));
+        jedis.lset("flights",idx,new JSONObject(ob).toString());
+    }
+
+    @Override
     public void addFlight(Flight f)
     {
-        Jedis jedis=new Jedis(JedisIP);
+        Jedis jedis=new Jedis(getRedisIP());
         jedis.rpush("flights",new JSONObject(f).toString());
     }
 }

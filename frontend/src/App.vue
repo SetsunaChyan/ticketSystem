@@ -2,8 +2,8 @@
     <div id="app">
         <div id="nav">
             <el-menu class="el-menu-demo" mode="horizontal">
-                <el-menu-item index="1"><router-link to="/">购票中心</router-link></el-menu-item>
-                <el-menu-item index="2"><router-link to="/cart">购到的票</router-link></el-menu-item>
+                <el-menu-item index="1" @click="$router.push('/')"><router-link to="/">购票中心</router-link></el-menu-item>
+                <el-menu-item index="2" @click="$router.push('/cart')"><router-link to="/cart">购到的票</router-link></el-menu-item>
             </el-menu>
         </div>
         <router-view/>

@@ -67,7 +67,7 @@ public class Server implements Runnable
             else
             {
                 result=method.invoke(remoteObject,params);
-                System.out.println("远程调用结束:remotObject:"+remoteObject.toString()+",params:"+params.toString());
+                //System.out.println("远程调用结束:remotObject:"+remoteObject.toString()+",params:"+params.toString());
             }
         }
         catch(Exception e)

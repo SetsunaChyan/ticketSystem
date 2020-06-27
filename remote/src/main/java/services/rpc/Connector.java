@@ -13,14 +13,6 @@ public class Connector
     private OutputStream os;
     private ObjectOutputStream oos;
 
-    public Connector(String host) throws Exception
-    {
-        int md=host.indexOf(":");
-        this.host=host.substring(0,md);
-        this.port=Integer.parseInt(host.substring(md+1));
-        connect(this.host,this.port);
-    }
-
     public Connector(String host,int port) throws Exception
     {
         this.host=host;

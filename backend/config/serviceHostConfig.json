@@ -1,0 +1,11 @@
+{
+    "BankServiceHost": [
+        {"ip": "localhost", "port": 23333},
+        {"ip": "localhost", "port": 23333}
+    ],
+    "FlightCompanyServiceHost": [
+        {"ip": "localhost", "port": 23334},
+        {"ip": "localhost", "port": 23335},
+        {"ip": "localhost", "port": 23336}
+    ]
+}
