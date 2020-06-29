@@ -1,11 +1,32 @@
 {
     "BankServiceHost": [
-        {"ip": "localhost", "port": 23333},
-        {"ip": "localhost", "port": 23333}
+        {
+            "name": "ICBC",
+            "hosts": [
+                {"ip": "localhost", "port": 23332},
+                {"ip": "localhost", "port": 23333}
+            ]
+        },
+        {
+            "name": "Alipay",
+            "hosts": [
+                {"ip": "localhost", "port": 24332}
+            ]
+        }
     ],
     "FlightCompanyServiceHost": [
-        {"ip": "localhost", "port": 23334},
-        {"ip": "localhost", "port": 23335},
-        {"ip": "localhost", "port": 23336}
+        {
+            "name": "春秋航空",
+            "hosts": [
+                {"ip": "localhost", "port": 23334},
+                {"ip": "localhost", "port": 23335}
+            ]
+        },
+        {
+            "name": "村纱航空",
+            "hosts": [
+                {"ip": "localhost", "port": 33334}
+            ]
+        }
     ]
 }

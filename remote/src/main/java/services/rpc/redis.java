@@ -39,7 +39,7 @@ public class redis
         f.setRest("2");
         jedis.rpush("flights",new JSONObject(f).toString());
         f.setFlightID("你买不起的机票");
-        f.setFlightCompany("村纱航空");
+        //f.setFlightCompany("村纱航空");
         f.setRest("9");
         f.setDeparture("上海");
         f.setArrival("香霖堂");

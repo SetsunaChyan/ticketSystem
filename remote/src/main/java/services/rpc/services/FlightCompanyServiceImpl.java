@@ -75,17 +75,6 @@ public class FlightCompanyServiceImpl implements FlightCompanyService
     }
 
     @Override
-    public List<Flight> getFlightInCast()
-    {
-        Jedis jedis=new Jedis(getRedisIP());
-        List<String> list=jedis.lrange("flightsInCast",0,-1);
-        List<Flight> ret=new ArrayList<>();
-        for(String it: list)
-            ret.add(new Flight(it));
-        return ret;
-    }
-
-    @Override
     public void decFlight(String flightName)
     {
         Pair<Flight, Integer> ret=getFlight(flightName);

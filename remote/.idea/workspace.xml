@@ -2,47 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0587dcaf-bbc1-41a8-b71f-e94f2b3b6e58" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../backend/config/serviceHostConfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/redisConfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/remote.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sys/entity/Flight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/rpc/Connector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/rpc/DynamicProxyFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/rpc/RemoteCall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/rpc/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/rpc/redis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/rpc/server/BankServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/rpc/server/FlightCompanyServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/rpc/services/BankService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/rpc/services/BankServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/rpc/services/FlightCompanyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/rpc/services/FlightCompanyServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/sys/SysApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/sys/SysApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/config/redisConfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/com/sys/entity/Hosts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/com/sys/entity/ServerHosts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/com/sys/manager/mainManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/config/serviceHostConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/config/serviceHostConfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/sys/controller/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/sys/controller/mainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/services/rpc/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/services/rpc/Connector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/services/rpc/DynamicProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/services/rpc/DynamicProxyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/services/rpc/Server.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/services/rpc/redis.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/services/rpc/server/BankServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/services/rpc/server/FlightCompanyServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/services/rpc/services/BankServiceImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/src/main/java/services/rpc/services/FlightCompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/services/rpc/services/FlightCompanyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/services/rpc/services/FlightCompanyServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/components/FlightTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/FlightTable.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/rpc/redis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/rpc/redis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/rpc/services/FlightCompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/rpc/services/FlightCompanyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/rpc/services/FlightCompanyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/rpc/services/FlightCompanyServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,8 +97,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.redis" />
-        <item itemvalue="Application.BankServer" />
         <item itemvalue="Application.FlightCompanyServer" />
+        <item itemvalue="Application.BankServer" />
       </list>
     </recent_temporary>
   </component>
@@ -140,7 +112,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592801228913</updated>
-      <workItem from="1592801234416" duration="18712000" />
+      <workItem from="1592801234416" duration="21958000" />
     </task>
     <servers />
   </component>
@@ -159,21 +131,25 @@
       <screen x="0" y="0" width="1549" height="831" />
     </state>
     <state x="555" y="171" key="FileChooserDialogImpl/0.0.1549.831@0.0.1549.831" timestamp="1593179441506" />
-    <state width="1506" height="211" key="GridCell.Tab.0.bottom" timestamp="1592982435627">
+    <state width="1506" height="211" key="GridCell.Tab.0.bottom" timestamp="1593431767182">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
+    <state width="1506" height="211" key="GridCell.Tab.0.bottom/0.0.1549.831/-1920.-115.1549.928@0.0.1549.831" timestamp="1593431767182" />
     <state width="1506" height="211" key="GridCell.Tab.0.bottom/0.0.1549.831@0.0.1549.831" timestamp="1592982435627" />
-    <state width="1506" height="211" key="GridCell.Tab.0.center" timestamp="1592982435627">
+    <state width="1506" height="211" key="GridCell.Tab.0.center" timestamp="1593431767182">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
+    <state width="1506" height="211" key="GridCell.Tab.0.center/0.0.1549.831/-1920.-115.1549.928@0.0.1549.831" timestamp="1593431767182" />
     <state width="1506" height="211" key="GridCell.Tab.0.center/0.0.1549.831@0.0.1549.831" timestamp="1592982435627" />
-    <state width="1506" height="211" key="GridCell.Tab.0.left" timestamp="1592982435627">
+    <state width="1506" height="211" key="GridCell.Tab.0.left" timestamp="1593431767182">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
+    <state width="1506" height="211" key="GridCell.Tab.0.left/0.0.1549.831/-1920.-115.1549.928@0.0.1549.831" timestamp="1593431767182" />
     <state width="1506" height="211" key="GridCell.Tab.0.left/0.0.1549.831@0.0.1549.831" timestamp="1592982435627" />
-    <state width="1506" height="211" key="GridCell.Tab.0.right" timestamp="1592982435627">
+    <state width="1506" height="211" key="GridCell.Tab.0.right" timestamp="1593431767182">
       <screen x="0" y="0" width="1549" height="831" />
     </state>
+    <state width="1506" height="211" key="GridCell.Tab.0.right/0.0.1549.831/-1920.-115.1549.928@0.0.1549.831" timestamp="1593431767182" />
     <state width="1506" height="211" key="GridCell.Tab.0.right/0.0.1549.831@0.0.1549.831" timestamp="1592982435627" />
     <state x="305" y="71" key="Maven.ArtifactSearchDialog" timestamp="1592883861646">
       <screen x="0" y="0" width="1549" height="831" />
